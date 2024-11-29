@@ -1,0 +1,145 @@
+html{
+    height: auto;
+    min-height: 100%;
+    margin: 0;
+    background-attachment: scroll;
+    background: linear-gradient(to bottom, black, purple);
+}
+
+body{
+    text-align: center;
+    font-family: Times New Roman;
+    color: white;
+}
+
+.pfp {
+    border-radius: 75px 0 75px 0;
+    border: solid 2px;
+}
+
+.button{
+text-align: left;
+}
+
+#galery{
+    overflow-x: auto;
+    width: 80%;
+    margin: auto;
+    border: solid 5px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.pic{
+    width: 100%;
+    border: 5px;
+    border-radius: 20%;
+    /* adding in JavaScript: onmouseover="width=200" onmouseleave="width=150" width="150" */
+}
+
+.pic:hover{
+    transform:scale(1.2);
+}
+
+.pic:active{
+    position: fixed;
+    top: 0;
+    left: 25vw;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: auto;
+    border-radius: 5%;
+    transform:scale(1);
+}
+
+
+h1{
+    width: 150px;
+    display: inline-block;
+    border: solid 2px;
+    border-radius: 75px 0 75px 0;
+    color: black;
+    background: linear-gradient(to right, white, #FAFAFA);
+}
+
+h2{
+    display: block;
+    margin: 20px;
+}
+
+.thin{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 100;
+}
+
+h2,h3,h4,p,footer{
+    text-shadow: 2px 2px 2px black;
+}
+
+.link{
+    display: block;
+    width: 250px;
+    background: linear-gradient(to right, white, #FAFAFA);
+    font-size: 20px;
+    border: solid 2px;
+    border-radius: 50px;
+    padding: 10px;
+    color: black;
+    margin: 10px auto;
+    text-decoration: none;
+}
+
+
+
+iframe{
+    aspect-ratio: 16/9;
+    width: 50%;
+}
+
+
+
+#subvideo{
+    display: inline flex;
+    width: 50%;
+    border: solid black 2px;
+}
+
+
+
+
+
+
+header{
+    border: outset black thin;
+    border-radius: 20px 0 0 0;
+    display: block;
+    background-color: rgba(255,255,255,0.95);
+    padding: 20px 0 0 0;
+    /*margin: 0 20% 0 20%;*/
+}
+
+main{
+    border: outset white thin;
+    background-color: rgba(0,0,0,0.3);
+    display: block;
+    padding: 20px;
+    /*margin: 0 20% 0 20%;*/
+}
+
+footer{
+    margin: 10px 0 0 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+
+    a{
+        color: white;
+        padding: 5px;
+    }
+
+    a:hover{
+        background-color: black;
+        border-radius: 10%;
+    }
+
+}
