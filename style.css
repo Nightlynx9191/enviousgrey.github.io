@@ -115,11 +115,21 @@ h4{
 .startleft{
     position: absolute;
     transform: translate(-110%, 120%); /* Vertikale Zentrierung des Textes */
+
+    @media(max-aspect-ratio: 4/3)
+    {
+        display: none;
+    }
 }
 
 .startright{
     position: absolute;
     transform: translate(10%, 120%); /* Vertikale Zentrierung des Textes */
+
+    @media(max-aspect-ratio: 4/3)
+    {
+        display: none;
+    }
 }
 
 #startcontainer{
@@ -152,6 +162,12 @@ h4{
     border-radius: 20px;
     background-color: black;
     animation: colorBoard 2s infinite;
+
+    @media(max-aspect-ratio: 4/3)
+    {
+    width: 90vw;
+    height: auto;
+    }
 }
 
 .pic{
@@ -179,6 +195,7 @@ h4{
     right: 0;
     height: 100vh;
     width: auto;
+    pointer-events: none; /* Verhindert das Öffnen des Kontextmenüs */
 
     @media(max-aspect-ratio: 4/3)
     {
