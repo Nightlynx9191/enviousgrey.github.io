@@ -1,7 +1,14 @@
+
+/* generelle Seitenansicht */
+
+
+
 html{
     height: auto;
     min-height: 100%;
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     background-attachment: scroll;
     background: linear-gradient(to bottom, black, purple);
 }
@@ -10,7 +17,13 @@ body{
     text-align: center;
     font-family: Times New Roman;
     color: white;
+    overflow: scroll;
 }
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 
 .pfp {
     border-radius: 75px 0 75px 0;
@@ -18,40 +31,36 @@ body{
 }
 
 .button{
-text-align: left;
+    text-align: left;
 }
 
-#galery{
-    overflow-x: auto;
-    width: 80%;
-    margin: auto;
-    border: solid 5px;
-    border-radius: 20px;
-    background-color: black;
-}
 
-.pic{
+.streifen{
     width: 100%;
-    border: 5px;
-    border-radius: 20%;
-    /* adding in JavaScript: onmouseover="width=200" onmouseleave="width=150" width="150" */
-}
-
-.pic:hover{
-    transform:scale(1.2);
-}
-
-.pic:active{
-    position: fixed;
+    height: 5px;
+    position: relative;
     top: 0;
-    left: 25vw;
-    bottom: 0;
-    right: 0;
-    height: 100vh;
-    width: auto;
-    border-radius: 5%;
-    transform:scale(1);
+    left: 0;
+    background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    animation: rainbow 5s linear infinite;
 }
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+  }
+}
+
+
+
+/* Überschriften */
 
 
 h1{
@@ -77,8 +86,21 @@ h2,h3,h4,p,footer{
     text-shadow: 2px 2px 2px black;
 }
 
+h4{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+/* Anpassungen Startseite */
+
 .link{
-    display: block;
+    display: inline-block;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
     width: 250px;
     background: linear-gradient(to right, white, #FAFAFA);
     font-size: 20px;
@@ -90,25 +112,244 @@ h2,h3,h4,p,footer{
     text-decoration: none;
 }
 
+.startleft{
+    position: absolute;
+    transform: translate(-110%, 120%); /* Vertikale Zentrierung des Textes */
+}
 
+.startright{
+    position: absolute;
+    transform: translate(10%, 120%); /* Vertikale Zentrierung des Textes */
+}
+
+#startcontainer{
+    display: flexbox;
+    
+}
+
+#nav{
+    margin: 40px 0 0 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+#starttext{
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    a{color: white;}
+}
+
+
+
+
+
+/* Anpassungen picture Seite */
+
+#galery{
+    width: 80%;
+    margin: 0 auto;
+    border: solid 2px;
+    border-radius: 20px;
+    background-color: black;
+    animation: colorBoard 2s infinite;
+}
+
+.pic{
+    width: 100%;
+    border: 5px;
+    border-radius: 20%;
+}
+
+@keyframes colorBoard{
+    0%{border-color: black;}
+    50%{border-color: purple;}
+    100%{border-color: black;}
+}
+
+
+.pic:hover{
+    transform:scale(1.2);
+}
+
+.pic:active{
+    position: fixed;
+    top: 0;
+    left: 25vw;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: auto;
+
+    @media(max-aspect-ratio: 4/3)
+    {
+    width: 100vw;
+    height: auto;
+    left:0;
+    }
+
+    border-radius: 5%;
+    transform:scale(1);
+}
+
+
+
+.picbutton{
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 5px;
+    width: 20vw;
+    height: 50px;
+    margin: 20px;
+}
+
+
+
+/* Anpassungen video Seite */
 
 iframe{
     aspect-ratio: 16/9;
-    width: 50%;
 }
 
+#mainvideo iframe{
+    width: 52%;
+
+    @media(max-aspect-ratio: 4/3)
+    {
+        width: 90%;
+    }
+}
 
 
 #subvideo{
     display: inline flex;
-    width: 50%;
     border: solid black 2px;
+    
+    iframe{
+        width:25vw;
+        @media(max-aspect-ratio: 4/3)
+        {
+            width:40vw;
+        }
+    }
+}
+
+
+.tools li{ /* Tool Liste - auch auf der picture Seite */
+    display: inline;
+}
+
+
+
+
+/* Anpassungen aboutme Seite */
+
+
+#about{
+    margin: auto;
+    text-align: center;
+
+    th,td{
+        /*border-radius: 0 20px 0 20px;*/
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: larger;
+    }
+
+    th{
+        padding: 20px 0 20px 0;
+        border-radius: 0;
+        background: none;
+    }
+
+    img{
+        border-radius: 0 20px 0 20px;
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+.aboutmecell
+{
+    width: 25vw;
+    height: 25vw;
+    
+    @media(max-aspect-ratio: 4/3){
+        width: 40vw;
+        height: 40vw;
+    }
+}
+
+.aboutmeNoAnimation
+{
+    animation: none;
+}
+
+
+.aboutmeAnimation
+{
+    animation: fading 3s;
+}
+
+    @keyframes fading{
+        0%{opacity: 0; transform: translateX(-10%);}
+        100%{opacity: 1; transform: translateX(0);}
+    }
+
+
+
+/* Commission Seite */
+
+#commissionPricing{
+    overflow-x: auto;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contactfeld{
+    width: 60vw;
+    height: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+#terms{
+    text-align: center;
+    list-style-position: inside;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 0;
+    li{
+        margin: 10px;
+    }
+}
+
+#termsbg{
+    background: black 0.5;
+    border: solid white 2px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.nopoint{
+    list-style-type: none;
+    font-style: italic;
+}
+
+.pic2{
+    width: 20vw;
+    border-radius: 50%;
+}
+
+.pic2:active{
+    border-radius: 0;
 }
 
 
 
 
 
+/* Seitenlayout */
 
 header{
     border: outset black thin;
@@ -119,27 +360,70 @@ header{
     /*margin: 0 20% 0 20%;*/
 }
 
+.com{
+    position: absolute;
+    top: 0px;
+    right: 8px;
+
+
+    width: 155px;
+    font-size: small;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: white;
+    border: solid black 1px;
+    border-radius: 0 0 0 50px;
+    padding: 10px;
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+
 main{
     border: outset white thin;
     background-color: rgba(0,0,0,0.3);
     display: block;
-    padding: 20px;
+    padding: 0 0 20px 0;
     /*margin: 0 20% 0 20%;*/
 }
 
 footer{
-    margin: 10px 0 0 0;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 100;
+}
 
-    a{
-        color: white;
-        padding: 5px;
+
+.footlinks{ /*now in head*/
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0 10px 0;
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100px;
+
+    td{
+        width:25vw;
     }
 
-    a:hover{
-        background-color: black;
-        border-radius: 10%;
+    a{
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    }
+
+    td:hover{
+        background-color:black;
+        background-size: auto;
     }
 
 }
+
