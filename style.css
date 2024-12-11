@@ -255,6 +255,11 @@ iframe{
     display: inline;
 }
 
+.tools{
+    padding-left: 0;
+    padding-inline-start: 0;
+}
+
 
 
 
@@ -322,6 +327,11 @@ iframe{
     margin: auto;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+
+    @media(max-aspect-ratio: 4/3)
+    {
+        width: 90vw;
+    }
 }
 
 .contactfeld{
@@ -329,6 +339,10 @@ iframe{
     height: auto;
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
+    @media(max-aspect-ratio: 4/3)
+    {
+        width: 90vw;
+    }
 }
 
 #terms{
@@ -344,8 +358,13 @@ iframe{
 #termsbg{
     background: black 0.5;
     border: solid white 2px;
-    width: 50%;
+    width: 60vw;
     margin: 0 auto;
+
+    @media(max-aspect-ratio: 4/3)
+    {
+        width: 90vw;
+    }
 }
 
 .nopoint{
@@ -360,6 +379,7 @@ iframe{
 
 .pic2:active{
     border-radius: 0;
+    pointer-events: none; /* Verhindert das Öffnen des Kontextmenüs */
 }
 
 
