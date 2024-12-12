@@ -202,7 +202,7 @@ function bildWechselReset(){
 //Bildwechsel
 
 function bildSeite0(){
-    document.getElementById("aboutmePic2").setAttribute("src", "https://www.dropbox.com/scl/fi/iwlh2rj2fqsgvgur3h8cn/1.jpg?rlkey=qntbi73r6bdoucdbz1p48z6cd&st=g81rww47&raw=1");
+    document.getElementById("aboutmePic2").setAttribute("src", "https://www.dropbox.com/scl/fi/s0j24hwzvog6oj5drlk4d/me.jpg?rlkey=nhvdanr5r0cdqs281yblqvuot&st=3y5660sb&raw=1");
     document.getElementById("aboutmePic1").setAttribute("src", "https://www.dropbox.com/scl/fi/5dhdeiu96j1zaiqmcbeti/2.jpg?rlkey=zy6ptd5n9rjcki91w2ztgjjj8&st=h0i42ejh&raw=1"); 
 }
 
@@ -228,7 +228,7 @@ function bildSeite4(){
 
 function bildSeite5(){
     document.getElementById("aboutmePic1").setAttribute("src", "https://www.dropbox.com/scl/fi/2ryk0e2wym2fnvnh32baz/okbye1.jpg?rlkey=fdcv0106vajwl47lz0hhgo6qx&st=u4lmhzsi&raw=1");
-    document.getElementById("aboutmePic2").setAttribute("src", "https://www.dropbox.com/scl/fi/ahixa0cecsaidijyfm30e/okbye2.jpg?rlkey=tbw06e767e7xyx8okzp1kbvd6&st=73sf2d1e&raw=1");
+    document.getElementById("aboutmePic2").setAttribute("src", "https://www.dropbox.com/scl/fi/jzzgni3m1xlgd9guzd9cr/neko-envy.jpg?rlkey=h5sa8rdnrz3pgfkqitea7qgun&st=vpivuz90&raw=1");
 }
 
 
@@ -240,8 +240,8 @@ function textSeite0(){
 }
 
 function textSeite1(){
-    text1.innerHTML ="I'm a<br><br> <i>m u s i c i a n &nbsp; ";
-    text2.innerHTML ="<b>and</b> &nbsp; a r t i s t</i> <br><br> (and furry <i>uwu</i>)";
+    text1.innerHTML ="I'm an <br><br> <i>a r t i s t&nbsp; ";
+    text2.innerHTML ="<b>and</b> &nbsp; </i> m u s i c i a n <br><br> <i>(and furry)</i>";
 }
 
 function textSeite2(){
@@ -250,18 +250,18 @@ function textSeite2(){
 }
 
 function textSeite3(){
-    text1.innerHTML ="and this is <br><br><i>m y - b e t t e r - h a l f</i>";
+    text1.innerHTML ="and this is my <br><br> <i>b e t t e r - h a l f</i>";
     text2.innerHTML ="<b> C H E V Y </b>";
 }
 
 function textSeite4(){
     text1.innerHTML ="she is <br><br> <i><b>c h a o s</i></b> <br><br>";
-    text2.innerHTML ="& <br><br> <i> m y &nbsp; l i f e </i> &nbsp; ^-^";
+    text2.innerHTML ="& <i> m y &nbsp; l i f e </i>";
 }
 
 function textSeite5(){
-    text1.innerHTML ="u h m . . . <br><br> <i> I don't know what else to say </i>";
-    text2.innerHTML ="O K &nbsp; B Y E &nbsp; ^-^";
+    text1.innerHTML ="u h m . . . <br><br> <i> idk what else to say </i>";
+    text2.innerHTML ="O K &nbsp; B Y E";
 }
 
 

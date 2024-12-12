@@ -143,6 +143,12 @@ h4{
     font-size: large;
 }
 
+#starttextup{
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
+
 #starttext{
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
